@@ -8,3 +8,16 @@ Host detux.vm
      HostName 45.62.236.52
      User root
      IdentityFile ~/.ssh/detux.vm
+
+Host dcc
+     HostName login.dcc.ufmg.br
+     User bastos.gabriel
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/dcc
+
+Host dcc-pomba
+     HostName pomba.grad
+     User bastos.gabriel
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/pomba
+     ProxyCommand ssh -W %h:%p dcc
