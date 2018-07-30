@@ -21,3 +21,10 @@ Host dcc-pomba
      PreferredAuthentications publickey
      IdentityFile ~/.ssh/pomba
      ProxyCommand ssh -W %h:%p dcc
+
+Host dcc-cipo
+     HostName cipo.grad
+     User bastos.gabriel
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/cipo
+     ProxyCommand ssh -W %h:%p dcc
